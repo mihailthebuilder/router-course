@@ -1,9 +1,11 @@
 import './App.scss';
 
+import Profile from "./components/Profile";
+
 function App() {
   return (
-    <div className="App">
-
+    <div>
+      <h1>Hello from App</h1>
     </div>
   );
 }
