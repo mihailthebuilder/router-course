@@ -1,13 +1,34 @@
 import './App.scss';
+import NavLinks from "./NavLinks";
+import About from "./About";
+import Home from "./Home";
+import Topics from "./Topics";
 
-import Profile from "./components/Profile";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>Hello from App</h1>
-    </div>
-  );
-}
+    <Router>
+      <div>
+        <NavLinks />
 
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/topics">
+            <Topics />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  )
+}
 export default App;
